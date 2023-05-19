@@ -6,7 +6,7 @@ RUN apk add --no-cache --update curl ca-certificates openssl git tar zsh bash sq
     && adduser --disabled-password --home /home/container container
 
 USER container
-ENV  USER=container HOME=/home/container
+ENV  USER=container HOME=/home/container IMAGE_VERSION=5-alpine
 
 WORKDIR /home/container
 
