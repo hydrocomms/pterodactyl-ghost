@@ -28,11 +28,13 @@ function run() {
     echo "Starting Ghost.. ($IMAGE_VERSION with CLI $BOLD$(ghost version | tail -1 | cut -d' ' -f3)$NORMAL)"
     echo "To change the public-facing URL or admin URL, please edit the variables in Pterodactyl."
     echo "The port is set to the primary port allocation. To edit this, you will need to modify the primary allocation in Pterodactyl."
+    chown -R container:container $GHOST_INSTALLED
+    chmod 
     ghost config --ip 0.0.0.0
     ghost config --port $SERVER_PORT
     ghost config --url $EGGOPT_URL
     ghost config --admin-url $EGGOPT_ADMINURL
-    ghost start --dir "$GHOST_INSTALLED" --color true
+    ghost start local --dir "$GHOST_INSTALLED" --color true
 }
 
 if [[ ! "${STARTUP}" == "/usr/bin/false" ]]; then
