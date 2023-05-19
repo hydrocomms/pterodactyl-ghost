@@ -44,5 +44,5 @@ jobs:
         with:
           context: ./ghost-5
           push: true
-          tags: 
+          tags: "5"
           labels: ${{ steps.meta.outputs.labels }}
