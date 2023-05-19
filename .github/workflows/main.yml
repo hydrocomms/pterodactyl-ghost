@@ -44,5 +44,5 @@ jobs:
         with:
           context: ./ghost-5
           push: true
-          tags: "5"
+          tags: "ghcr.io/hydrocomms/pterodactyl-ghost:5"
           labels: ${{ steps.meta.outputs.labels }}
