@@ -30,7 +30,8 @@ function run() {
     echo "The port is set to the primary port allocation. To edit this, you will need to modify the primary allocation in Pterodactyl."
     ghost config --ip 0.0.0.0
     ghost config --port $SERVER_PORT
-    ghost config --url $
+    ghost config --url $EGGOPT_URL
+    ghost config --admin-url $EGGOPT_ADMINURL
     ghost start --dir "$GHOST_INSTALLED" --color true
 }
 
