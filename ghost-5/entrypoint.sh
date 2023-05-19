@@ -4,12 +4,12 @@ export GHOST_INSTALLED="/home/container/ghost"
 
 cd /home/container
 
-mkdir -p /home/container/content
+mkdir -p /home/container/ghost
 
 echo "[EGG]: Entering entrypoint (Ghost container 5)"
 
 function run() {
-    echo "Started A!"
+    echo "Starting Ghost.. ($IMAGE_VERSION with CLI $(ghost version | tail -1 | cut -d' ' -f3))"
     ghost start --dir "$GHOST_INSTALLED" --color true
 }
 
