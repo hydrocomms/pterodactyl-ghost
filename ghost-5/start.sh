@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run -it -p 80:80 ghcr.io/hydrocomms/pterodactyl-ghost:5
+docker run -it -p 80:80 -e STARTUP="bash" ghcr.io/hydrocomms/pterodactyl-ghost:5

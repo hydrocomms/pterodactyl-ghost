@@ -2,7 +2,7 @@ FROM ghost:5-alpine
 
 LABEL maintainer="git@danny.works"
 
-RUN apk add --no-cache --update curl ca-certificates openssl git tar zsh bash sqlite fontconfig \
+RUN apk add --no-cache --update curl ca-certificates openssl git tar zsh bash sqlite fontconfig ncurses \
     && adduser --disabled-password --home /home/container container
 
 USER container
