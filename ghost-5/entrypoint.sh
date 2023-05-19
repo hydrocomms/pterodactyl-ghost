@@ -33,6 +33,7 @@ function run() {
     ghost config --url $EGGOPT_URL
     ghost config --admin-url $EGGOPT_ADMINURL
     ghost config --db mysql --dbhost $EGGOPT_DBHOST --dbname $EGGOPT_DBNAME --dbuser $EGGOPT_DBUSER --dbpass $EGGOPT_DBPASS --dbport $EGGOPT_DBPORT
+    ghost config --process local
     ghost start --dir "$GHOST_INSTALLED" --color true --process local
 }
 
