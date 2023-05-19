@@ -14,7 +14,6 @@ ghost config --admin-url $EGGOPT_ADMINURL
 ghost config --db mysql --dbhost $EGGOPT_DBHOST --dbname $EGGOPT_DBNAME --dbuser $EGGOPT_DBUSER --dbpass $EGGOPT_DBPASS
 
 find /mnt/server/ghost/* -type d -exec chmod 775 {} \;
-find /mnt/server/ghost/* -type d -exec chmod 664 {} \;
 
 #runuser -l "tc" -c "ghost doctor --dir /mnt/server/ghost"
 
